@@ -1,0 +1,30 @@
+/* pages/records/records.wxss */
+.records{
+    padding:30rpx;
+}
+.record-list{
+    background-color: white;
+    border-radius: 3%;
+    margin-bottom: 30rpx;
+    padding: 37rpx;
+}
+
+.record_title{
+    font-size: 50rpx;
+    margin-bottom: 20rpx;
+}
+
+.number{
+    display: inline-block;
+    width: 40%;
+    font-size: 28rpx;
+    color: #6b6666;
+}
+
+.time{
+    display: inline-block;
+    width: 59%;
+    font-size: 28rpx;
+    text-align: right;
+    color: #6b6666;
+}

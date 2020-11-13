@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: true # Whether to enable support of multipart uploads
+      max-file-size: 10MB
+      max-request-size: 100MB
+server:
+  port: 8085
+  tomcat:
+    basedir: /home/temp/system
+

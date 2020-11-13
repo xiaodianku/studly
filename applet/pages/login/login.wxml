@@ -1,0 +1,22 @@
+     <view wx:if="{{canIUse}}" >
+        <view class='title-login'>
+            您还未登录 请先登录哦
+        </view>
+
+        <view class='header'>
+            <image src='{{logo}}' mode="widthFix"></image>
+        </view>
+        <view class="input-class">
+            <input placeholder="请输入手机号码" bindinput="bindKeyInput" value="{{phone}}"/>
+        </view>
+        <view class="buttom-view">
+          <button class='bottom sqdl'  open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+              <image src="/images/wx.png" style="width:42rpx;height:34rpx;"/> 
+              <text decode = "{{true}}">&nbsp;&nbsp;</text>微信授权登录
+          </button>
+          <button class='bottom'  bindtap="qxsq">
+              暂不登录
+          </button>
+        </view>
+    </view>
+    <view wx:else>请升级微信版本</view>

@@ -1,0 +1,12 @@
+<!--pages/records/records.wxml-->
+<view class="records">
+
+    <block wx:for="{{recordList}}"  wx:for-item="item" wx:key="item.id">
+        <view class="record-list" bindtap='goDetail' data-id="{{item.articleId}}">
+            <view class="record_title">{{item.articleTitle}}</view>
+            <view class="number">类别：{{item.categoryName}}</view>
+            <view class="time">{{item.browsingTimeStr}}</view>
+        </view>
+    </block>
+
+</view>

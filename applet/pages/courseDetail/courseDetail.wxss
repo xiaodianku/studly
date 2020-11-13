@@ -1,0 +1,153 @@
+/* pages/courseDetail/courseDetail.wxss */
+.contain{
+    padding: 35rpx 31rpx 100rpx 35rpx
+}
+
+.title_image{
+    width: 100%;
+    border-radius: 2%;
+    margin-bottom: 15rpx;
+}
+
+.desc{
+    background-color: white;
+    border-radius: 2%;
+    padding:30rpx 3% ;
+    margin-bottom: 30rpx;
+}
+
+
+.desc_title_content{
+      /* 设置flex布局 */
+      display: flex;
+      /* 垂直居中 */
+      align-items: center;
+      /* 水平居中 */
+      justify-content: left;
+      text-align:center;
+}
+
+.dian{
+    display: inline;
+    color: #b7b7b7;
+    font-size: 70rpx;
+    margin-top: -41rpx;
+    margin-right: 1%;
+}
+
+.left_desc{
+    display: inline;
+    color: #b7b7b7;
+}
+ 
+
+.xian{
+    margin-top: 40rpx;
+    border-bottom: 3rpx solid #dddddd;
+    margin-bottom: 40rpx;
+}
+
+.desc_title{
+    font-size: 36rpx;
+    text-align: center;
+    color: #30d85c;
+}
+
+.xian2{
+    margin-top: 40rpx;
+    border-bottom: 3rpx solid #30d85c;
+    margin-bottom: 40rpx;
+    width: 70%;
+    margin: 40rpx auto;
+}
+
+.desc_text{
+    font-size: 38rpx;
+}
+
+.desc_img{
+    margin-top: 20rpx
+}
+
+.desc_img image{
+    width: 100%;
+}
+
+.desc_video{
+    margin-top: 20rpx
+}
+
+.desc_video video{
+    width: 100%;
+}
+
+
+.leave_message_list{
+    background-color: white;
+    border-radius: 2%;
+    padding:30rpx 3% ;
+    margin-bottom: 40rpx;
+    margin-top: 30rpx;
+}
+
+.leave_message_user{
+    /* 设置flex布局 */
+    display: flex;
+    /* 垂直居中 */
+    align-items: center;
+    /* 水平居中 */
+    justify-content: left;
+    text-align:left;
+    font-size: 32rpx;
+    margin-bottom: 20rpx;
+}
+.leave_message_user image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    margin-right: 3%;
+}
+
+.leave_message_content{
+    padding: 40rpx;
+    font-size: 30rpx;
+    border:1px solid #dddddd;
+    margin-bottom: 20rpx;
+}
+
+.leave_message_time{
+    color: #615a5a;
+    font-size: 27rpx;
+    text-align: left;
+}
+
+
+
+
+.bottom_info{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.bottom_one{
+    width:70%;
+    display:inline-block;
+    background-color: #f32148;
+    text-align: center;
+    line-height: 80rpx;
+    color: #f5f0f0;
+    font-size: 40rpx;
+}
+
+
+.bottom_two{
+    width:100%;
+    display:inline-block;
+    background-color: #30b335;
+    text-align: center;
+    line-height: 80rpx;
+    color: #f5f0f0;
+    font-size: 40rpx;
+}

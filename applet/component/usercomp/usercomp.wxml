@@ -1,0 +1,7 @@
+<!--component/usercomp/usercomp.wxml-->
+    <!-- 自定义组件 -->
+      <view class="list_orders">
+        <image class="img" src="{{img}}" />
+        <text class="text">{{order}}</text>
+      </view>
+  

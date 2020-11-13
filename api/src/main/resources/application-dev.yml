@@ -1,0 +1,51 @@
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://47.92.101.231:3306/studly?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      username: whw
+      password: 123456
+      druid:
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1
+        testWhileIdle: true
+        testOnBorrow: true
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        filters: stat,wall
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+        stat-view-servlet:
+          allow: 127.0.0.1
+  jpa:
+    open-in-view: true
+    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        max_fetch_depth: 1
+#        ddl-auto: update
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+mybatis:
+   mapperLocations: classpath:/mapper/*.xml
+   configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+wx:
+  appid: wxef17e4e9067eb8b1
+  sercetkey: eadc154846e221860f70a4e5765a4bb8
+  merappid: a
+  merid: a
+  mername: a
+  merKey: a
+  notifyurl: http://xxxx:8081/payBack/xcxNotify
+  loadpath: /home/static/html/
+  showpath: http://xxxxx:8080/html/
+
+
+
+

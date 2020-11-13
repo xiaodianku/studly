@@ -1,0 +1,48 @@
+/* component/usercomp/usercomp.wxss */
+
+.list_orders
+{
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  /* margin-top: 20rpx; */
+  height: 50px;
+  line-height: 50px;
+  border-bottom:1px solid rgb(245, 239, 239);
+}
+.img
+{
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-left: 30rpx;
+}
+.text
+{
+  font-size: 16px;
+  margin-left: 20rpx;
+}
+
+/* 设置 */
+.setting
+{
+    width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  /* margin-top: 20rpx; */
+  height: 50px;
+  line-height: 50px;
+}
+.setting-img{
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-left: 30rpx;
+}
+.setting-text
+{
+  font-size: 16px;
+  margin-left: 20rpx;
+}

@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/guodu/guodu",
+        "pages/course/course",
+        "pages/login/login",
+        "pages/courseDetail/courseDetail",
+ 
+        "pages/user/user",
+        "pages/records/records",
+ 
+        "pages/leaveMessage/leaveMessage",
+        "component/usercomp/usercomp",
+        "pages/videoFull/videoFull"
+    ],
+    "tabBar": {
+        "color": "#6E758C",
+        "selectedColor": "#27323F",
+        "selectedindex": 1,
+        "list": [
+            {
+                "pagePath": "pages/course/course",
+                "iconPath": "images/message.png",
+                "selectedIconPath": "images/active-message.png",
+                "text": "课程列表"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "iconPath": "images/user.png",
+                "selectedIconPath": "images/active-user.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "学英语口语训练营",
+        "navigationBarTextStyle": "black",
+        "onReachBottomDistance": 300
+    },
+    "sitemapLocation": "sitemap.json"
+}

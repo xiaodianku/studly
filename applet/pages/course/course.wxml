@@ -1,0 +1,35 @@
+<!--pages/courses/course.wxml-->
+<view class="contain">
+<!-- 侧边栏内容 -->
+<view class="page-slidebar">
+        <view class="page-content">
+            <view class="wc {{categoryId == ''?'changeColor':''}}" bindtap="changeCategory" data-categoryid="">
+                <text>全部</text>
+            </view>
+            <block wx:for="{{categoryList}}"  wx:for-item="item" wx:key="id">
+                <view class="wc {{categoryId == item.id?'changeColor':''}}"  bindtap="changeCategory" data-categoryid="{{item.id}}">
+                    <text>{{item.name}}</text>
+                </view>
+            </block>
+        </view>
+</view>
+
+<view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{open ? ['c-state','cover'] : ''}} ">
+    <view class="carte" ><image src="../../images/svg/caidan.svg" bindtap="tap_ch"></image></view>
+    <view class="title" bindtap='closeTc' >
+        课程列表 
+    </view>
+    <view bindtap='closeTc' style="height:100%;">
+        <block wx:for="{{articleList}}"  wx:for-item="item" wx:key="id">
+                <view class="lists" bindtap='goDetail' data-id="{{item.id}}">
+                    <image src="{{item.titleImg}}"></image>
+                    <view class="desc">{{item.title}}</view>
+                    <view class="number">类别：{{item.categoryName}}</view>
+                </view>
+        </block>
+    </view>
+
+</view>
+
+
+</view>

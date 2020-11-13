@@ -1,0 +1,62 @@
+<!--pages/courseDetail/courseDetail.wxml-->
+<view class="contain">
+    <image src="{{articleDetail.titleImg}}" class="title_image" mode="widthFix"></image>
+    <view class="desc">
+        <view class="desc_title_content" decode="{{true}}" >
+            <view class="dian">. </view><view class="left_desc"> 课程名称 ：</view>{{articleDetail.courseName}}
+        </view>
+        <view class="desc_title_content" decode="{{true}}" >
+            <view class="dian">. </view><view class="left_desc"> 类别 ：</view>{{articleDetail.categoryName}}
+        </view>
+        <!-- <view class="desc_title_content" decode="{{true}}">
+            <view class="dian">. </view><view class="left_desc"> 参与人数 ：</view>787887人
+        </view>
+        <view class="desc_title_content" decode="{{true}}">
+            <view class="dian">. </view><view class="left_desc"> 解锁课时 ：</view>781课时
+        </view>
+        <view class="desc_title_content" decode="{{true}}">
+            <view class="dian">. </view><view class="left_desc"> 解锁规则 ：</view>每天可解锁2个课时
+        </view> -->
+        <view class="xian"></view>
+
+        <view class="desc_title">课程介绍</view>
+
+        <view class="xian2"></view>
+
+        <view class="desc_text" decode="{{true}}">
+            {{articleDetail.content}}
+        </view>
+
+        <view class="desc_img">
+            <block wx:for="{{articleDetail.imageList}}" wx:for-item="value" wx:key="value">
+                <image bindtap='previewImg' data-image="{{value}}"  src="{{value}}" mode="widthFix"></image>                
+            </block>
+        </view>
+
+        <view class="desc_video">
+            <block wx:for="{{articleDetail.videoList}}" wx:for-item="value" wx:key="value">
+                <video  id="myVideo"  src="{{value}}"  bindplay="videoPlay" bindpause="videoPlay"></video> 
+            </block>
+        </view>
+    </view>
+
+    <view style="color:#a7a3a3;font-size:30rpx;" decode="{{true}}">
+        留言人数：<view style="display:inline-block;color:#040404;">{{leaveMessageTotal}}</view> 人
+    </view>
+
+    <block wx:for="{{leaveMessageList}}"  wx:for-item="item" wx:key="item.id">
+        <view class="leave_message_list">
+            <view class="leave_message_user">
+                <image src="{{item.img}}"></image> {{item.nickname}}
+            </view>
+            <view class="leave_message_content">
+                {{item.content}}
+            </view>
+            <view class="leave_message_time">{{item.leaveMessageTime}}</view>
+        </view>
+    </block>
+
+    <view class="bottom_info">
+        <view class="bottom_two" bindtap="goLeaveMessage">留言</view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/user/user.wxml-->
+<view id="box">
+    <view class="main">
+        <view class="header-box" wx:if="{{userId != ''}}">
+            <view class="head">
+                <image class='headImage' src="{{image}}"></image>
+            </view>
+            <view class="nickname">
+                <text decode = "{{true}}">{{nickname}}&nbsp;&nbsp;</text>
+            </view>
+        </view>
+        <view  wx:else  class="header-box test-image-center">
+            <view style="width:200rpx; height:64rpx;" class="add-source save-bottom" bindtap="toLogin">
+                点击登录
+            </view>
+        </view>
+        <view style="height:24rpx;width:100%;"></view>
+        <view class='tab'  bindtap='goRecord'>
+            <image src='/images/svg/sc.svg'></image>
+            浏览记录
+        </view>
+    </view>
+</view>
+<view class="jszc" style="position: fixed;bottom:0px;">提供支持</view>

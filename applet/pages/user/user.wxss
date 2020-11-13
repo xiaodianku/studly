@@ -1,0 +1,43 @@
+.header-box{
+    height:326rpx;
+    text-align: center;
+    background:rgba(255,255,255,1);
+}
+.header-box .head{
+    display:inline-block;
+    position:relative;
+    height: 148rpx;
+    width: 148rpx;
+    margin-top: 60rpx;
+}
+
+.header-box .head image{
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+}
+
+.header-box .nickname {
+    line-height: 50rpx;
+    text-align:center;
+    font-size:33rpx;
+    color:rgba(18,18,18,1);
+}
+
+.tab{
+    /* 设置flex布局 */
+    display: flex;
+    /* 垂直居中 */
+    align-items: center;
+    /* 水平居中 */
+    justify-content: left;
+    font-size:30rpx;
+    background:rgba(255,255,255,1);
+    padding: 20rpx 30rpx;
+}
+ 
+.tab image{
+    width:35rpx;
+    height:35rpx;
+    margin-right: 3%;
+}

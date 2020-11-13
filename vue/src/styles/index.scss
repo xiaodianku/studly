@@ -1,0 +1,203 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+html,body{
+  height:100%;
+  width:100%;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background-color: #F5F5F5;
+}
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+
+}
+//给父元素加上一个高度100%；就可以铺满，为了图片不变形，一般宽度是固定数值为单位；
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+div:focus{
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+#app{
+  height: 100%;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+//main-container全局样式
+.app-main{
+  width: 95%;
+  margin: 2% auto;
+  background-color: #FFFFFF;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.contain-table{
+  background-color: #FFFFFF;
+}
+.page-bottom{
+  margin-top: 2%;
+}
+.el-table td, .el-table th{
+  padding: 8px;
+}
+
+//.oprator-class{
+//    color:#169BD5;
+//}
+//.oprator-class:hover{
+//  cursor: pointer;
+//  color:#169BD5;
+//}
+
+.cell {
+  padding: 8px;
+}
+.cell a {
+  color:#169BD5;
+}
+.cell a:hover{
+  cursor: pointer;
+  color:#169BD5;
+}
+
+.tip-title{
+  color:#97989d;
+}
+
+.title-contain{
+  font-size:22px;
+  font-family:PingFang-SC-Bold;
+  font-weight:bold;
+  color:rgba(26,26,26,1);
+  line-height:30px;
+}
+.tip-title-user{
+  font-size:14px;
+  font-family:Microsoft YaHei;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  line-height:30px;
+}
+
+.el-dialog__header{
+  border-bottom: 1px solid #EBEBEB;
+}
+.customWidth{
+  width: 40%;
+  margin-bottom: 50px;
+}
+.app-container .el-form-item{
+  margin-bottom: 25px;
+}
+.el-table td, .el-table th {
+  padding: 0px;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* 文字和图片居中 */
+.test-image-center{
+  /* 设置flex布局 */
+  display: flex;
+  /* 垂直居中 */
+  align-items: center;
+  /* 水平居中 */
+  justify-content: center;
+  text-align:center;
+}
+
+
+
+.zhiding{
+  bottom: 53px;
+  right: 47px;
+  position: fixed;
+  background-color: #FFF;
+  width: 40px;
+  height: 40px;
+  color: #595959;
+  font-size: 11px;
+  text-align: center;
+  background: rgba(245,245,245,1);
+  border-radius:50%;
+  padding-top: 6px;
+  cursor: pointer;
+}
+.zhiding:hover{
+  background:rgba(56,112,240,1);
+  color:#FFFFFF;
+}
+
+
+.el-message-box .el-message-box__btns{
+  text-align: center !important;
+}
+.el-message-box .el-button{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.block  .el-date-editor .el-range-separator {
+  width: 10%;
+}
+
+.fix-total .el-col-4{
+  width: 19.66667%
+}
+.tbuser-total .el-col{
+  padding: 0px;
+}
+
+.edit-dialog-must .el-form-item__label:before {
+  content: '*';
+  color: #ff1818;
+  margin-right: 3px;
+}

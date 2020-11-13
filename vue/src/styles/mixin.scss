@@ -1,0 +1,39 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 12px;
+}
+input:-ms-input-placeholder { // IE10+
+  font-size: 12px;
+}
+input:-moz-placeholder { // Firefox4-18
+  font-size: 12px;
+}
+input::-moz-placeholder { // Firefox19+
+  font-size: 12px;
+}
