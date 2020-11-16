@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface TbUserDao extends JpaRepository<TbUser, Integer> {
 
-    @Query(value = "select a.*  from tb_user a order by a.create_time desc  limit ?1,?2" ,nativeQuery = true)
+    @Query(value = "select a.*  from tb_user a order by a.gmt_create desc  limit ?1,?2" ,nativeQuery = true)
     List<TbUser> getList(int offset, int rows);
 
     TbUser findByOpenid(String openid);

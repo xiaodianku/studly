@@ -27,9 +27,9 @@ public class QiNiuUtil {
     //构造一个带指定Region对象的配置类
     static  Configuration cfg = new Configuration(Region.region2());
     //空間名
-    static String bucketName = "oumeisi";
+    static String bucketName = "sgxskt";
 
-    static String url = "http://qjosdczrw.hn-bkt.clouddn.com/";
+    static String url = "http://sgzxkt.aobortin.com/";
 
     static String accessKey = "Z5pK8Dxl9UYZzYSD5K0FuWt1RbBZW5o6G2tyLnfj";
 

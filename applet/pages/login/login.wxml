@@ -7,7 +7,7 @@
             <image src='{{logo}}' mode="widthFix"></image>
         </view>
         <view class="input-class">
-            <input placeholder="请输入手机号码" bindinput="bindKeyInput" value="{{phone}}"/>
+            <input placeholder="请输入手机号码" bindinput="bindKeyInput" value="{{phone}}" focus="{{true}}"  />
         </view>
         <view class="buttom-view">
           <button class='bottom sqdl'  open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">

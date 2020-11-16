@@ -98,8 +98,7 @@ public class WxUtil {
      */
     public  String getOpenId(String code) {
         JSONObject jsonObject = code2sessionKey(code);
-        String openId = jsonObject.getString("openid");// 用户唯一标识
-        return openId;
+        return jsonObject.getString("openid");
     }
 
     /**
@@ -113,6 +112,7 @@ public class WxUtil {
                 "https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code",
                 appid, sercetkey, code);
         String response = HttpUtils.httpsRequestToStringWx(stringToken, "GET", null);
+        System.out.println("认证结果：" + response);
         return JSON.parseObject(response);
     }
 

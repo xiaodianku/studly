@@ -179,6 +179,11 @@
         this.listQuery.pageNum = val
         this.getList();
       },
+      handleFilter() {
+        //查询事件
+        this.listQuery.pageNum = 1
+        this.getList()
+      },
       getCategoryList() {
         //查询列表
         this.listLoading = true;

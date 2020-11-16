@@ -1,9 +1,9 @@
 spring:
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://47.92.101.231:3306/studly?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
-      username: whw
-      password: 123456
+      url: jdbc:mysql://39.100.95.147:3306/studly?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      username: sgzxkt
+      password: sgzxkt2020...
       druid:
         initialSize: 5
         minIdle: 5
@@ -30,23 +30,7 @@ spring:
 #        max_fetch_depth: 1
 #        ddl-auto: update
 #        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-  #配置Redis数据
-  redis:
-    # 使用的数据库，默认为0
-    database: 1
-    # host主机，默认为localhost
-    host: 121.196.121.63
-    # 端口号,默认为6379
-    port: 6379
-    # 密码，默认为空
-    password:
-    jedis:
-      pool:
-        max-active: 9
-        max-wait: 1
-        max-idle: 8
-        min-idle: 0
-    timeout: 2000
+
 
 mybatis:
    mapperLocations: classpath:/mapper/*.xml
@@ -54,14 +38,14 @@ mybatis:
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 wx:
   appid: wx1411ecdfc3c6e585
-  merappid: wwe66d74f3b1fc66ee
   sercetkey: aaebab80b3d04901b8ce737b71699548
-  merid: 1590900801
-  mername: 拉萨扩大
-  merKey: 7d18d4c9ddb6790d732f70211345d1b5
-  notifyurl: http://www.yqcode0563.cn:8081/payBack/xcxNotify
+  merappid: xx
+  merid: xx
+  mername: xx
+  merKey: xx
+  notifyurl: http://xxxxxxx/payBack/xcxNotify
   loadpath: /home/static/html/
-  showpath: http://www.yqcode0563.cn:8080/html/
+  showpath: http://xxxxxxx/html/
 
 
 

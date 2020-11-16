@@ -21,6 +21,7 @@ public class ExceptionHandle {
             GirlException girlException = (GirlException) e;
             return ResultUtil.error(girlException.getCode(), girlException.getMessage());
         }else {
+            e.printStackTrace();
             log.error("【系统异常】{}", e);
             return ResultUtil.error(-1, "未知错误");
         }

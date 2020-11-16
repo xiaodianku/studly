@@ -15,7 +15,7 @@
             <img :src="scope.row.img" width="50px" height="50px"/>
           </template>
         </el-table-column>
-        <el-table-column align="center" label="注册时间" prop="createTime" :formatter="yyyymmddhhiiss"  min-width="30%"></el-table-column>
+        <el-table-column align="center" label="注册时间" prop="gmtCreate" :formatter="yyyymmddhhiiss"  min-width="30%"></el-table-column>
       </el-table>
     </div>
 
@@ -65,7 +65,7 @@
       getList() {
         this.listLoading = true;
         api({
-          url: "/market/userList",
+          url: "/user/userList",
           method: "get",
           params: this.listQuery
         }).then(data => {

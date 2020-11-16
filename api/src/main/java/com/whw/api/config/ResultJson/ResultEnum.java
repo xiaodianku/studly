@@ -11,6 +11,7 @@ public enum ResultEnum {
     SMS_ERROR(504, "验证码错误"),
     EMPTY_MOBILE(505, "手机号码不能为空"),
     HAVING_MOBILE(506, "当前手机号码已存在，请更换手机号尝试"),
+    NOT_LOGIN_AUTH(509, "当前手机号码，无登录权限"),
     NOT_FIND_USER(507, "用户名账号/密码错误！"),
     ;
 

@@ -13,8 +13,8 @@ public interface TbArticleDao extends JpaRepository<TbArticle, Integer> {
     @Query(value = "select a.*  from tb_article a  limit ?1,?2" ,nativeQuery = true)
     List<TbArticle> getList(int offset, int rows);
 
-    List<TbArticle> findAllByOrderByGmtCreateDesc();
+    List<TbArticle> findByStatusOrderByGmtCreateDesc(Integer status);
 
-    List<TbArticle> findByCategoryIdOrderByGmtCreateDesc(Integer category);
+    List<TbArticle> findByCategoryIdAndStatusOrderByGmtCreateDesc(Integer category, Integer status);
 
 }

@@ -19,9 +19,9 @@
     <view class="title" bindtap='closeTc' >
         课程列表 
     </view>
-    <view bindtap='closeTc' style="height:100%;">
+    <view bindtap='closeTc' style="height:91%;overflow:scroll;">
         <block wx:for="{{articleList}}"  wx:for-item="item" wx:key="id">
-                <view class="lists" bindtap='goDetail' data-id="{{item.id}}">
+                <view class="lists" bindtap="{{open ?'':'goDetail'}}" data-id="{{item.id}}">
                     <image src="{{item.titleImg}}"></image>
                     <view class="desc">{{item.title}}</view>
                     <view class="number">类别：{{item.categoryName}}</view>

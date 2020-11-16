@@ -78,15 +78,17 @@ Page({
     goDetail: function(e){
         console.log("goDetail")
         if(this.data.open) {
-            return;
+            return false;
+        }else{
+            const id = e.currentTarget.dataset.id;
+            wx.navigateTo({
+                url: '/pages/courseDetail/courseDetail?articleId='+id
+              })
         }
-        const id = e.currentTarget.dataset.id;
-        wx.navigateTo({
-            url: '/pages/courseDetail/courseDetail?articleId='+id
-          })
     },
     // 点击左上角小图标事件
     tap_ch: function(e) {
+        console.log("tap_ch")
         if (this.data.open) {
             this.setData({
                 open: false
@@ -114,13 +116,13 @@ Page({
         console.log(this.data.newmarkX)
         console.log(this.data.markX)
         // 手指从左向右移动
-        if (this.data.markX+20 < this.data.newmarkX) {
+        if (this.data.markX+60 < this.data.newmarkX) {
             this.setData({
                 open: true
             });
         }
         // 手指从右向左移动
-        if (this.data.markX > this.data.newmarkX+20) {
+        if (this.data.markX > this.data.newmarkX+60) {
             this.setData({
                 open: false
             });

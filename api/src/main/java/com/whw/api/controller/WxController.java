@@ -3,6 +3,8 @@ package com.whw.api.controller;
 import com.whw.api.config.ResultJson.GirlException;
 import com.whw.api.config.ResultJson.ResultEnum;
 import com.whw.api.config.ResultJson.ResultUtil;
+import com.whw.api.config.emnu.ArticleStatus;
+import com.whw.api.config.emnu.MapStaticEnum;
 import com.whw.api.dao.*;
 import com.whw.api.model.*;
 import com.whw.api.util.DateUtil;
@@ -31,6 +33,9 @@ public class WxController extends BaseController {
     @Autowired
     private TbUserDao tbUserDao;
 
+    @Autowired
+    private TbMapDao tbMapDao;
+
     /**
      * 获取用户信息
      * @param code
@@ -55,7 +60,12 @@ public class WxController extends BaseController {
     @RequestMapping("/addUser")
     public Object addUser(String code, String nickName, String avatarUrl, Integer beUserId, String mobile) {
         String openId = wxUtil.getOpenId(code);
-        if(StringTools.isNullOrEmpty(openId)) throw new GirlException(ResultEnum.UNKONW_ERROR);
+        if(StringTools.isNullOrEmpty(openId)) throw new GirlException("openid is null");
+        System.out.println("*" + MapStaticEnum.LOGIN_PHONE.getName());
+        List<TbMap> byKNameAndVName = tbMapDao.findByKNameAndVName(MapStaticEnum.LOGIN_PHONE.getName(), mobile);
+        if(byKNameAndVName.size() == 0) {
+            throw new GirlException(ResultEnum.NOT_LOGIN_AUTH);
+        }
         //是否在登录的范畴内
         TbUser mobileUser = tbUserDao.findByMobile(mobile);
         if(mobileUser != null) {
@@ -92,9 +102,9 @@ public class WxController extends BaseController {
     public Object getArticleList(Integer categoryId) {
         List<TbArticle> list = null;
         if(categoryId == null){
-            list = tbArticleDao.findAllByOrderByGmtCreateDesc();
+            list = tbArticleDao.findByStatusOrderByGmtCreateDesc(ArticleStatus.OPEN.getValue());
         }else{
-            list = tbArticleDao.findByCategoryIdOrderByGmtCreateDesc(categoryId);
+            list = tbArticleDao.findByCategoryIdAndStatusOrderByGmtCreateDesc(categoryId, ArticleStatus.OPEN.getValue());
         }
         for (TbArticle article : list) {
             TbCategory category = tbCategoryDao.getOne(article.getCategoryId());
